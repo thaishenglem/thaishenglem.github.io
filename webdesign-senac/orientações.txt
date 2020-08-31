@@ -1,0 +1,15 @@
+Exercício HTML/CSS
+
+Prazo de entrega: 24/08/2020
+
+Como falei na live de hoje, temos uma atividade nova para desenvolvimento: *aplicação de recursos CSS no site HTML disponibilizado e publicação dele na sua conta do GitHub Pages.*
+
+Vocês tem liberdade para alterar o HTML (adicionar tags, atributos etc) de acordo com o que for necessário para a utilização do CSS. O CSS deve ter recursos de formatação geral (cores, alinhamentos, fontes, bordas, sombras etc) e também media queries para tornar o site responsivo (use a abordagem que preferir: mobile first ou desktop first).
+ 
+Por fim, a publicação deve ser feita no GitHub Pages da mesma forma que você fez com o site Ômega.
+Desta forma, este será mais um pequeno projeto que fará parte do seu portfólio pessoal.
+ 
+Por favor, atentem-se ao prazo de entrega: *24/08/2020*.
+Qualquer dificuldade pontual ou dúvidas, converse comigo em particular.
+ 
+Abraço e bons estudos! :)
