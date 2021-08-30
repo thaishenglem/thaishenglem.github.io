@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap');
+
+
+/* Regra utilitária para ajustes no Box Model
+(usar sempre! em qualquer projeto web) */
+
+*,*::after, *::before{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(imagens-omega/textura-fundo.png);
+    background-attachment: fixed;
+    font-family:'Open Sans', Verdana, Arial, sans-serif;
+}
+
+img{max-width: 100%;}
+
+
+/* Regras de CSS Reset */
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header, footer {
+    background-color: rgba(202, 194, 194, 0.699);
+    text-align: center;
+}
+
+header{
+    border-bottom: solid 2px;
+    margin-bottom: 7px;
+}
+
+footer {
+    border-top: solid 2px;
+}
+
+main{
+    width: 95%;
+    margin: auto;
+}
+
+article {
+    background-color: white;
+    box-shadow: grey 1px 1px 5px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+h1, nav, h2, h3, button {
+    font-family: 'Orbitron', Verdana, sans-serif;
+}
+
+h2, h3, p {padding: 1% 0;}
+
+/* p {line-height: 1.2;} */
+
+footer img{ width: 50px; }
+
+footer h2 { font-size: 1.2 rem;}
+
+footer p { font-size: .75rem;} /* ou 0.75 */
+
+section, figure { margin: 40px 0;}
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+iframe {width: 100%}
+
+/* Regras temporárias para auxílio no ajuste de espaços e alinhamentos */
+
+/* h1 { background-color: red;}
+h1 a { background-color: green;}
+nav { background-color: yellow;}
+nav a { background-color: lightblue;} */
+
+h1, h1 a, nav, nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 { 
+    padding: 5px 0;
+    font-size: 2.2rem;
+}
+
+h1 img { width: 50px;}
+
+nav a {
+    height: 50px;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+nav a:hover, nav a:focus {
+    background-color: black;
+    color: white;
+}
+
+article img {
+    filter: grayscale(50%);
+    transition: 2s;
+}
+
+article img:hover {filter: grayscale(0);}
+
+/* Regras para formulário */
+
+input, textarea {
+    border: solid 2px;
+    width: 100%;
+    padding: 10px;
+    font-size: .9rem;
+}
+
+label{ font-size: .7rem;}
+
+
+/* Pode ser assim também: */
+/* #nome, #email, #telefone, #assunto, #mensagem {
+    
+}*/
+
+button{
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+button:hover, button:focus {
+    background-color: darkblue;
+     cursor: pointer; /*alterar o cursos do mouse */
+}
+
+#voltar-topo{
+    position: fixed;
+    /* top, bottom, left, right, z-index (Mexer os eixos - Alto: mais para frente na tela. Baixo: profundidade do eixo - para trás..exemplo post-it / x= esquerda e direita, y= cima e baixo) */
+    bottom: 5px;
+    right: 5px;
+}
+
+/* todos os links existentes em qualquer parágrafo (p a { }) */
+
+#voltar-topo a {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+#voltar-topo a:hover, #voltar-topo a:focus {
+    background-color: darkblue;
+}
+
+/* #voltar-topo a::before {content:"▲"}; */
+
+ /* Medias Queries
+ Regras especiais que aplicarão formatações de acordo com determinadas condições (a partir de certos tamanhos de tela) */
+
+ @media screen and (min-width: 700px){
+     /* h2 {color: red;} teste*/
+     .container{
+         display: flex;
+         justify-content: space-between;
+         width: 95%;
+         margin: auto;
+     }
+ }
+     
+ /*  1) Acesse o HTML da página index e adicione uma div com a classe "grupo" às seções do artigo O que Fazemos */
+
+ /* 2) Acesse o HTML  da página index e adicione uma div com a classe "grupo" aos figures do artigo Nossas Equipes*/
+
+ /* 3) No CSS, crie uma nova mídia query para telas a partir de 750px (esse valor pode mudar), com as seguintes regras/propriedades:
+ 
+ - uma classe chamada grupo, contendo flex, expaçamento entre e flex-wrap: wrap (pesquise do que se trara)
+ 
+ - uma regra para as seções contidas na classe "grupo", e para os figures contidos na classe "grupo", contendo largura de 49% (experimente antes de usar 50%) */
+
+@media screen and (min-width: 750px) {
+    .grupo {
+        display: flex;
+         justify-content: space-between;
+         /*Modo de "quebra" de linha/row */
+        flex-wrap: wrap;
+    }
+
+    .grupo section, .grupo figure {
+        width: 49%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        /* Essa % vai definir quantas colunas ficarão na mesma linha, colocando 50% já ficariam 2 colunas, mas com 49% cria-se uma margem entre eles */
+    }
+}
+
+/* Mini exercício
+Crie uma media query para telas a partir de 820px, e aumente o tamanho geral de todos os textos para 20px */
+
+@media screen and (min-width: 820px) {
+    html {font-size: 20px;}
+}
+
+@media screen and (min-width: 1000px){
+    .container, main {max-width: 1000px;}
+
+    header {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        top: 0;
+    }
+
+    #voltar-topo {display: none;}
+
+    #topo, #o-que-fazemos, #nossas-equipes, #contato {
+        padding-top: 75px;
+    }
+}
+
