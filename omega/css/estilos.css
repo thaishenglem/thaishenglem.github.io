@@ -14,7 +14,7 @@ html{
 }
 
 body{
-    background-image: url(imagens-omega/textura-fundo.png);
+    background-image: url(../imagens-omega/textura-fundo.png);
     background-attachment: fixed;
     font-family:'Open Sans', Verdana, Arial, sans-serif;
 }
