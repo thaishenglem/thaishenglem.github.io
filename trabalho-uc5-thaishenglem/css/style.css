@@ -237,10 +237,23 @@ h3 {
     padding-bottom: 25px;
 }
 
-    /* usar o flex aqui para poder alinhar os itens */
+ 
 
-
-
+#voltar-topo{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+    
+#voltar-topo a {
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+}
+    
+#voltar-topo a:hover, #voltar-topo a:focus {
+    background-color: yellow;
+}
 
 /* WHATSAPP FIXO */
 
@@ -251,7 +264,7 @@ h3 {
     width:60px;
     height:60px;
     bottom:40px;
-    right:40px;
+    left:40px;
     background-color:rgba(0,200,0,1);
     color:white;
     border-radius:50px;
@@ -262,7 +275,7 @@ h3 {
     z-index:9000;
 } 
 
-.whatsapp-fixo:hover{
+.whatsapp-fixo:hover {
     background-color:rgba(0,150,0,1);
     color:white;
 }
@@ -277,7 +290,6 @@ h3 {
     70% {box-shadow: 0 0 0 20px rgba(0,200,0, 0);} 
     100% {box-shadow: 0 0 0 0 rgba(0,200,0, 0);} 
 } 
-
 
     
 footer{
